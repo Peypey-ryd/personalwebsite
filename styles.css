@@ -36,7 +36,7 @@ body::before{
     radial-gradient(circle at 70% 70%, rgba(178,255,239,0.75) 0, transparent 18%);
 }
 .site-header{backdrop-filter: blur(10px);position:sticky;top:0;z-index:40;background:transparent;border-bottom:1px solid rgba(255, 186, 214, 0.4);position:relative;overflow:hidden}
-.site-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('Images/navbar.jpg');background-size:cover;background-position:center;opacity:1;pointer-events:none;filter:brightness(1.05);}
+.site-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('Images/Navbar/navbar.jpg');background-size:cover;background-position:center;opacity:1;pointer-events:none;filter:brightness(1.05);}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;position:relative;z-index:1}
 .brand{font-weight:700;color:var(--accent);text-decoration:none;font-family:'Playfair Display',serif;font-size:1.35rem;letter-spacing:.03em}
 .nav{display:flex;gap:1rem}
