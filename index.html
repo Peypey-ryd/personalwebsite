@@ -4,6 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -31,13 +34,55 @@
       <div class="container">
         <h2>Hobbies</h2>
         <p class="panel-sub">Things I enjoy doing in my free time.</p>
-        <ul class="hobbies-list">
-          <li>Rowing</li>
-          <li>Golf</li>
-          <li>Travelling</li>
-          <li>Writing</li>
-          <li>Coffee walks</li>
-        </ul>
+        <div class="hobbies-grid">
+          <article class="hobby-card">
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200&q=80&auto=format&fit=crop" alt="Rowing on water">
+            <div class="card-body">
+              <h3>Rowing</h3>
+              <p>Early-morning rows clear my head and give a focused, meditative start to the day — I love the rhythm and teamwork.</p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1200&q=80&auto=format&fit=crop" alt="Golf course">
+            <div class="card-body">
+              <h3>Golf</h3>
+              <p>Golf is where patience and precision meet a beautiful outdoor setting; I enjoy the challenge and course walks.</p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80&auto=format&fit=crop" alt="Travel scene">
+            <div class="card-body">
+              <h3>Travelling</h3>
+              <p>I collect small rituals and stories from new places — travel refreshes perspective and fuels creativity.</p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop" alt="Writing with a notebook">
+            <div class="card-body">
+              <h3>Writing</h3>
+              <p>Writing helps me process ideas and connect with readers — I enjoy essays, short fiction, and reflective pieces.</p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <img src="https://images.unsplash.com/photo-1471115853179-bb1d604434e0?w=1200&q=80&auto=format&fit=crop" alt="Coffee walk">
+            <div class="card-body">
+              <h3>Coffee walks</h3>
+              <p>Short walks with a great cup of coffee are my favorite mini rituals — perfect for thinking and spotting local life.</p>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80&auto=format&fit=crop" alt="Community service scene">
+            <div class="card-body">
+              <h3>Community service</h3>
+              <p>I volunteer regularly — community work grounds me and connects me with purpose and people.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -48,20 +93,31 @@
         <ol class="media-list">
           <li>
             <div class="media-item">
-              <div class="media-title">The Brothers Karamazov</div>
-              <div class="media-meta">Rating: <strong>10/10</strong></div>
+              <div>
+                <div class="media-title">The Brothers Karamazov</div>
+                <div class="media-meta">Rating: <strong>10/10</strong></div>
+                <p class="media-comment">A deeply philosophical and emotionally powerful novel — complex characters and moral inquiry that stayed with me long after finishing.</p>
+              </div>
             </div>
           </li>
+
           <li>
             <div class="media-item">
-              <div class="media-title">Emma</div>
-              <div class="media-meta">Rating: <strong>8/10</strong></div>
+              <div>
+                <div class="media-title">Emma</div>
+                <div class="media-meta">Rating: <strong>8/10</strong></div>
+                <p class="media-comment">A witty and charming social comedy; delightful character work and a cozy, clever read.</p>
+              </div>
             </div>
           </li>
+
           <li>
             <div class="media-item">
-              <div class="media-title">Excerpt from "Sourland" — Ariel Delgado Dixon</div>
-              <div class="media-meta">Excerpt</div>
+              <div>
+                <div class="media-title">Excerpt from "Sourland" — Ariel Delgado Dixon</div>
+                <div class="media-meta">Excerpt</div>
+                <p class="media-comment">A lyrical, evocative excerpt — intimate and vivid, with a strong sense of place and voice.</p>
+              </div>
             </div>
           </li>
         </ol>
@@ -73,14 +129,14 @@
         <h2>Skills</h2>
         <p class="panel-sub">A few core competencies and strengths.</p>
         <div class="skills-grid">
-          <span class="skill">HTML</span>
-          <span class="skill">C++</span>
-          <span class="skill">Python</span>
-          <span class="skill">Excel</span>
-          <span class="skill">Artificial Intelligence</span>
-          <span class="skill">Spanish</span>
-          <span class="skill">Event Execution</span>
-          <span class="skill">Dependability</span>
+          <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> HTML</span>
+          <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> C++</span>
+          <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> Python</span>
+          <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> Excel</span>
+          <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> Artificial Intelligence</span>
+          <span class="skill"><svg class="icon briefcase" viewBox="0 0 24 24" aria-hidden><path d="M6 7V6a2 2 0 012-2h8a2 2 0 012 2v1h3v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3z"/></svg> Spanish</span>
+          <span class="skill"><svg class="icon briefcase" viewBox="0 0 24 24" aria-hidden><path d="M6 7V6a2 2 0 012-2h8a2 2 0 012 2v1h3v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3z"/></svg> Event Execution</span>
+          <span class="skill"><svg class="icon briefcase" viewBox="0 0 24 24" aria-hidden><path d="M6 7V6a2 2 0 012-2h8a2 2 0 012 2v1h3v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3z"/></svg> Dependability</span>
         </div>
       </div>
     </section>
