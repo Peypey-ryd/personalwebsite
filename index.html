@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">My Personal Site</a>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav class="nav" id="site-nav">
+        <a href="#hobbies">Hobbies</a>
+        <a href="#media">Media list</a>
+        <a href="#skills">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Hi — I build things, explore, and enjoy good coffee.</h1>
+        <p class="lead">Welcome — browse my hobbies, recent media, and skills below.</p>
+      </div>
+    </section>
+
+    <section id="hobbies" class="panel">
+      <div class="container">
+        <h2>Hobbies</h2>
+        <p class="panel-sub">Things I enjoy doing in my free time.</p>
+        <ul class="hobbies-list">
+          <li>Rowing</li>
+          <li>Golf</li>
+          <li>Travelling</li>
+          <li>Writing</li>
+          <li>Coffee walks</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="media" class="panel">
+      <div class="container">
+        <h2>Media list</h2>
+        <p class="panel-sub">Most recent pieces I've consumed.</p>
+        <ol class="media-list">
+          <li>
+            <div class="media-item">
+              <div class="media-title">The Brothers Karamazov</div>
+              <div class="media-meta">Rating: <strong>10/10</strong></div>
+            </div>
+          </li>
+          <li>
+            <div class="media-item">
+              <div class="media-title">Emma</div>
+              <div class="media-meta">Rating: <strong>8/10</strong></div>
+            </div>
+          </li>
+          <li>
+            <div class="media-item">
+              <div class="media-title">Excerpt from "Sourland" — Ariel Delgado Dixon</div>
+              <div class="media-meta">Excerpt</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="skills" class="panel">
+      <div class="container">
+        <h2>Skills</h2>
+        <p class="panel-sub">A few core competencies and strengths.</p>
+        <div class="skills-grid">
+          <span class="skill">HTML</span>
+          <span class="skill">C++</span>
+          <span class="skill">Python</span>
+          <span class="skill">Excel</span>
+          <span class="skill">Artificial Intelligence</span>
+          <span class="skill">Spanish</span>
+          <span class="skill">Event Execution</span>
+          <span class="skill">Dependability</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> — Personal site</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
