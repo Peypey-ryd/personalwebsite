@@ -14,14 +14,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
     toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
   });
 
-  // Smooth scroll (handles Home '#')
+  // Smooth scroll (only for same-page anchors). Let external and multi-page links navigate normally.
   links.forEach(link=>{
     link.addEventListener('click', (e)=>{
+      const href = link.getAttribute('href') || '';
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const hrefPage = href.split('#')[0] || '';
+
+      // External links (http/https) — allow browser to handle
+      if(/^https?:\/\//i.test(href)) return;
+
+      // If href points to a different HTML page, allow normal navigation
+      if(hrefPage && hrefPage !== '' && hrefPage !== currentPage && hrefPage.endsWith('.html')) return;
+
+      // Otherwise handle as same-page anchor (including index.html -> '#...' or '#')
       e.preventDefault();
       nav.classList.remove('open');
-      const href = link.getAttribute('href');
       const target = getTarget(href);
       if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      // update URL without causing navigation
       history.replaceState(null,'', href);
     });
   });
