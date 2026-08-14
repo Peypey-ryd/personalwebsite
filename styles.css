@@ -79,6 +79,17 @@ body::before{
 .play-link:hover{transform:translateY(-1px);background:rgba(255,127,191,0.24)}
 .play-icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#ff7fbf;color:#fff;font-size:0.95rem;box-shadow:0 6px 16px rgba(124,79,132,0.15)}
 
+/* Contact form */
+.contact-form{max-width:680px;background:linear-gradient(180deg,#fff,#fff);padding:1.25rem;border-radius:14px;box-shadow:var(--shadow)}
+.contact-form label{display:block;margin-bottom:0.8rem;color:var(--muted);font-weight:600}
+.contact-form input,.contact-form textarea{width:100%;padding:.65rem .75rem;border:1px solid rgba(122,107,127,0.12);border-radius:10px;margin-top:.35rem;font-size:0.95rem}
+.form-actions{display:flex;gap:.75rem;align-items:center;margin-top:1rem}
+.btn{background:var(--accent);color:#fff;padding:.6rem .9rem;border-radius:999px;border:0;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(124,79,132,0.12)}
+.btn:hover{transform:translateY(-2px)}
+.btn-linkedin{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem .9rem;border-radius:999px;background:linear-gradient(90deg,#e8f6ff,#f3fbff);color:#0a66c2;text-decoration:none;border:1px solid rgba(10,102,194,0.06)}
+.btn-linkedin svg{display:block}
+.form-note{color:var(--muted);margin-top:1rem}
+
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}
 .skill{display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;border-radius:12px;background:linear-gradient(180deg,#fff,#fff);box-shadow:var(--shadow);font-weight:600;color:#4a2f3a}
 .skill .icon{width:20px;height:20px;fill:var(--accent);flex:0 0 20px}
