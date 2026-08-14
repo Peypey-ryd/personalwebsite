@@ -42,7 +42,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   // initial active on load
   function setActiveOnLoad(){
+    // prefer matching current filename (separate pages)
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     let found=false;
+    for(let i=0;i<links.length;i++){
+      const href = links[i].getAttribute('href') || '';
+      const norm = (href === '#' || href === '' ) ? 'index.html' : href.split('/').pop();
+      if(norm === currentPage){ links.forEach(l=>l.classList.remove('active')); links[i].classList.add('active'); found=true; break; }
+    }
+    if(found) return;
+
+    // fallback: check visible sections
     for(let i=0;i<sections.length;i++){
       const s=sections[i]; if(!s) continue;
       const r=s.getBoundingClientRect();
@@ -51,7 +61,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         links[i].classList.add('active'); found=true; break;
       }
     }
-    if(!found){ links.forEach(l=>l.classList.remove('active')); const home = nav.querySelector('a[href="#"]'); if(home) home.classList.add('active'); }
+    if(!found){ links.forEach(l=>l.classList.remove('active')); const home = nav.querySelector('a[href="index.html"]') || nav.querySelector('a[href="#"]'); if(home) home.classList.add('active'); }
   }
   setActiveOnLoad();
 

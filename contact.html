@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Peyton Rydzewski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Peyton Rydzewski</a>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav class="nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="professional-journey.html">Professional journey</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="panel-sub">Get in touch</p>
+
+        <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/mgawzkog">
+          <label>Full name
+            <input type="text" name="name" required />
+          </label>
+
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+
+          <label>Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Send message</button>
+            <a class="btn btn-linkedin" href="https://www.linkedin.com/in/peyton-rydzewski-04720527b/" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path fill="#0A66C2" d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8.5 17H6v-7h2.5v7zM7.25 9.7A1.45 1.45 0 117.25 6.8a1.45 1.45 0 010 2.9zM18 17h-2.5v-3.5c0-.9-.4-1.5-1.3-1.5-.7 0-1.1.5-1.3 1V17H10v-7h2.4v1c.3-.5.9-1.1 2-1.1 1.6 0 2.6 1 2.6 3V17z"/></svg>
+              Peyton Rydzewski | LinkedIn
+            </a>
+          </div>
+
+          <div id="form-result" aria-live="polite" style="margin-top:1rem"></div>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> — Personal site</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
