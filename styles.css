@@ -102,10 +102,18 @@ body::before{
 }
 
 @media (max-width:720px){
+  /* allow the mobile dropdown nav to extend beyond the header */
+  .site-header{overflow:visible}
   .hobbies-grid{grid-template-columns:1fr}
-  .nav{position:absolute;right:1rem;top:64px;background:#fef5fb;padding:.75rem;border-radius:10px;flex-direction:column;display:none;min-width:180px;box-shadow:0 10px 24px rgba(122,107,129,0.12)}
+  .nav{position:absolute;right:1rem;top:64px;background:#ffffff;padding:.75rem;border-radius:10px;flex-direction:column;display:none;min-width:220px;box-shadow:0 10px 24px rgba(122,107,129,0.12);z-index:70}
   .nav.open{display:flex}
-  .nav-toggle{display:block}
+  .nav a{display:block;color:#3a2a3a;padding:.6rem .9rem;border-radius:8px;font-weight:600}
+  .nav a:hover{background:rgba(255,127,191,0.12)}
+  .nav-toggle{display:block;position:relative;z-index:80;padding:.45rem .6rem;border-radius:8px;cursor:pointer;background:transparent}
+  /* visually-hidden for screen readers */
+  .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+  .nav-toggle{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+  .nav-toggle:focus{outline:2px solid rgba(110,231,183,0.18);outline-offset:3px}
   .container{padding:1rem}
   .hero h1{font-size:1.4rem}
 }

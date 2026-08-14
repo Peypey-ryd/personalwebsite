@@ -8,10 +8,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
   };
   const sections = links.map(l=>getTarget(l.getAttribute('href')));
 
-  // Mobile toggle
+  // Mobile toggle (update aria attributes and visible sr-only label)
   toggle.addEventListener('click', ()=>{
-    nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+    const sr = toggle.querySelector('.sr-only');
+    if(isOpen){
+      toggle.setAttribute('aria-label','Close navigation');
+      if(sr) sr.textContent = 'Close navigation';
+    } else {
+      toggle.setAttribute('aria-label','Open navigation');
+      if(sr) sr.textContent = 'Open navigation';
+    }
   });
 
   // Smooth scroll (only for same-page anchors). Let external and multi-page links navigate normally.
@@ -24,8 +32,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
       // External links (http/https) — allow browser to handle
       if(/^https?:\/\//i.test(href)) return;
 
-      // If href points to a different HTML page, allow normal navigation
-      if(hrefPage && hrefPage !== '' && hrefPage !== currentPage && hrefPage.endsWith('.html')) return;
+      // If href points to a different HTML page, force navigation (some environments suppress default)
+      if(hrefPage && hrefPage !== '' && hrefPage !== currentPage && hrefPage.endsWith('.html')){
+        nav.classList.remove('open');
+        window.location.href = href;
+        return;
+      }
 
       // Otherwise handle as same-page anchor (including index.html -> '#...' or '#')
       e.preventDefault();
