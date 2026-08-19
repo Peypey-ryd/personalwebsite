@@ -90,6 +90,13 @@ body::before{
 .btn-linkedin svg{display:block}
 .form-note{color:var(--muted);margin-top:1rem}
 
+/* Hobby action buttons (amazon, substack) */
+.hobby-actions{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
+.btn-inline{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .75rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:0.95rem}
+.btn-inline svg{width:16px;height:16px;flex:0 0 16px;fill:currentColor}
+.btn-amazon{background:#ff9900;color:#fff}
+.btn-substack{background:#111;color:#fff}
+
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}
 .skill{display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;border-radius:12px;background:linear-gradient(180deg,#fff,#fff);box-shadow:var(--shadow);font-weight:600;color:#4a2f3a}
 .skill .icon{width:20px;height:20px;fill:var(--accent);flex:0 0 20px}
