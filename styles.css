@@ -16,9 +16,9 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
-  background: radial-gradient(circle at top left, rgba(255, 128, 191, 0.16), transparent 26%),
-              radial-gradient(circle at 80% 10%, rgba(115, 216, 200, 0.18), transparent 24%),
-              linear-gradient(180deg, #fff8f5 0%, #fdf3f9 35%, #f7fff9 100%);
+  background: radial-gradient(circle at top left, rgba(255, 128, 191, 0.14), transparent 30%),
+              radial-gradient(circle at 80% 10%, rgba(115, 216, 200, 0.12), transparent 30%),
+              linear-gradient(180deg, #fff7f9 0%, #ffeef8 50%, #f7fff9 100%);
   color:#3a2a3a;
   -webkit-font-smoothing:antialiased;
   position:relative;
@@ -30,10 +30,10 @@ body::before{
   inset:0;
   pointer-events:none;
   background-image:
-    radial-gradient(circle at 15% 15%, rgba(255,255,255,0.85) 0, transparent 18%),
-    radial-gradient(circle at 85% 20%, rgba(247,255,255,0.9) 0, transparent 12%),
-    radial-gradient(circle at 40% 80%, rgba(255,228,235,0.75) 0, transparent 16%),
-    radial-gradient(circle at 70% 70%, rgba(178,255,239,0.75) 0, transparent 18%);
+    radial-gradient(circle at 15% 15%, rgba(255,255,255,0.6) 0, transparent 22%),
+    radial-gradient(circle at 85% 20%, rgba(247,255,255,0.6) 0, transparent 14%),
+    radial-gradient(circle at 40% 80%, rgba(255,228,235,0.45) 0, transparent 18%),
+    radial-gradient(circle at 70% 70%, rgba(178,255,239,0.45) 0, transparent 20%);
 }
 .site-header{backdrop-filter: blur(10px);position:sticky;top:0;z-index:40;background:transparent;border-bottom:1px solid rgba(255, 186, 214, 0.4);position:relative;overflow:hidden}
 .site-header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('Images/Navbar/navbar.jpg');background-size:cover;background-position:center;opacity:1;pointer-events:none;filter:brightness(1.05);}
