@@ -88,7 +88,7 @@ body::before{
 /* pixel sticker above the artists panel */
 .artist-sticker{position:absolute;top:-86px;right:-46px;z-index:30;pointer-events:none;transform:rotate(-12deg)}
 .artist-sticker .pixel-headphones{shape-rendering:crispEdges;image-rendering:pixelated;display:block;background:transparent;border-radius:12px}
-.artist-sticker::after{content:'';position:absolute;left:58%;top:18%;transform:translate(-50%,-50%) rotate(-12deg);width:56px;height:14px;background:linear-gradient(90deg,#fff7c6,#fff1a8);border-radius:3px;opacity:0.98;filter:blur(0.6px);box-shadow:0 6px 18px rgba(0,0,0,0.12);z-index:40}
+.artist-sticker::after{content:'';position:absolute;left:58%;top:18%;transform:translate(-50%,-50%) rotate(-12deg);width:56px;height:14px;background:linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.92));border-radius:3px;opacity:0.98;filter:blur(0.8px);box-shadow:0 6px 18px rgba(0,0,0,0.08);z-index:40}
 
 @media (max-width:920px){
   .artist-sticker{top:-34px;right:-32px}
@@ -97,8 +97,9 @@ body::before{
 
 /* hero sticker */
 .hero{position:relative}
-.hero-sticker{position:absolute;left:-80px;top:-90px;z-index:25;transform:rotate(-10deg);pointer-events:none;width:260px;height:260px}
-.hero-sticker::before{content:'';position:absolute;left:120px;top:160px;width:380px;height:90px;background:linear-gradient(90deg, rgba(255,241,200,0.92) 0%, rgba(255,241,200,0.6) 30%, rgba(255,241,200,0.18) 65%, rgba(255,241,200,0) 100%);transform:rotate(-12deg);filter:blur(8px);pointer-events:none;mix-blend-mode:screen;z-index:15}
+.hero-sticker{position:absolute;left:-80px;top:-90px;z-index:25;pointer-events:none;width:260px;height:260px}
+/* spotlight beam: narrow end pinned inside the star, widening down-right across the headline */
+.hero-sticker::before{content:'';position:absolute;left:150px;top:0;width:640px;height:240px;pointer-events:none;z-index:24;mix-blend-mode:screen;transform-origin:0 50%;transform:rotate(12deg);filter:blur(12px);opacity:0.98;clip-path:polygon(0% 44%,100% 0%,100% 100%,0% 56%);background:linear-gradient(90deg, rgba(255,246,214,0.96) 0%, rgba(255,208,236,0.74) 22%, rgba(214,190,255,0.4) 55%, rgba(190,230,255,0) 100%)}
 .hero-sticker .pixel-star{image-rendering:pixelated;width:260px;height:260px}
 .hero-sticker-right{position:absolute;right:-60px;top:-10px;z-index:25;transform:rotate(6deg);pointer-events:none;width:140px;height:140px}
 .hero-sticker-right .pixel-heart{image-rendering:pixelated;width:140px;height:140px}
@@ -112,12 +113,14 @@ body::before{
 /* align media sticker with the Media list heading baseline and make it large */
 .media-heading-wrap{position:relative;display:flex;align-items:center;width:100%;margin-bottom:.25rem}
 .media-heading-wrap h2{margin:0}
-.media-heading-wrap .media-sticker{position:absolute;right:0;top:0;z-index:40;transform:translateY(-28px) rotate(-6deg);pointer-events:none}
+.media-heading-wrap .media-sticker{position:absolute;right:0;top:-150px;z-index:10003;transform:rotate(20deg);pointer-events:none}
 .media-heading-wrap .pixel-books{image-rendering:pixelated;width:320px;height:320px}
 
 /* right-side connector sticker to bridge hero and hobbies */
-.hero-connector-right{position:absolute;right:6%;bottom:-18px;z-index:9999;pointer-events:none;transform:translateY(100px);width:160px;height:160px}
-.hero-connector-right .pixel-connector{image-rendering:pixelated;width:160px;height:160px}
+/* right/bottom offsets account for the empty padding around the SVG's pixels
+   so the graphic sits where intended regardless of box size */
+.hero-connector-right{position:absolute;right:calc(6% - 60px);bottom:-188px;z-index:10010;pointer-events:none;width:280px;height:280px}
+.hero-connector-right .pixel-connector{image-rendering:pixelated;width:280px;height:280px}
 
 /* skills sticker positioned relative to the Skills container */
 .skills-sticker{position:absolute;right:-8px;top:6px;z-index:40;pointer-events:none;width:220px;height:220px;transform:rotate(6deg)}
@@ -130,16 +133,61 @@ body::before{
   100%{transform:translateY(0) rotate(-4deg)}
 }
 
+/* sun shining keyframes and glow */
+@keyframes sun-pulse{0%{transform:scale(1);opacity:0.85}50%{transform:scale(1.08);opacity:1}100%{transform:scale(1);opacity:0.85}}
+@keyframes sun-rotate{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
+.skills-sticker::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:460px;height:460px;border-radius:50%;background:radial-gradient(circle at 40% 35%, rgba(255,245,180,0.45) 0%, rgba(255,200,80,0.26) 24%, rgba(255,160,30,0.08) 46%, rgba(255,160,30,0) 70%);filter:blur(28px);pointer-events:none;z-index:22;opacity:1;animation:sun-pulse 3s ease-in-out infinite}
+.skills-sticker .pixel-sun{filter:drop-shadow(0 20px 36px rgba(255,180,60,0.22));animation:sun-rotate 36s linear infinite}
+
+@media (prefers-reduced-motion: reduce){
+  .skills-sticker::before,.skills-sticker .pixel-sun{animation:none!important}
+}
+
+/* subtle homepage animations */
+@keyframes floatY { 0% { transform: translateY(0); } 50% { transform: translateY(-6px); } 100% { transform: translateY(0); } }
+@keyframes bob { 0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(-1deg)}100%{transform:translateY(0) rotate(0)} }
+@keyframes pop { 0%{transform:scale(.98);opacity:0}60%{transform:scale(1.02);opacity:1}100%{transform:scale(1);opacity:1} }
+@keyframes shimmer-slow{0%{opacity:.85}50%{opacity:1}100%{opacity:.85}}
+
+/* apply animations */
+/* star, connector, and book stickers are statically positioned so their
+   transforms (spotlight beam, offsets) aren't overridden by keyframes */
+.hero-sticker-right{animation: floatY 5.5s ease-in-out infinite;}
+.artist-sticker{animation: floatY 6.6s ease-in-out infinite;}
+.skills-sticker{animation: bob 6.2s ease-in-out infinite;}
+.hobby-card{animation: pop 900ms cubic-bezier(.2,.9,.3,1) both;}
+.media-item{animation: pop 900ms cubic-bezier(.2,.9,.3,1) both;}
+.artist-photo{transition:transform 900ms cubic-bezier(.2,.9,.3,1),filter 900ms;}
+.artist-photo-wrap::before{animation:shimmer-slow 2.4s linear infinite}
+.skill{animation:pop 700ms cubic-bezier(.2,.9,.3,1) both}
+.hero h1,.hero p{animation:pop 900ms ease both}
+
+/* stagger children for nicer entrance */
+.hobbies-grid .hobby-card:nth-child(1){animation-delay:120ms}
+.hobbies-grid .hobby-card:nth-child(2){animation-delay:240ms}
+.hobbies-grid .hobby-card:nth-child(3){animation-delay:360ms}
+.hobbies-grid .hobby-card:nth-child(4){animation-delay:480ms}
+.media-list .media-item:nth-child(1){animation-delay:140ms}
+.media-list .media-item:nth-child(2){animation-delay:260ms}
+.artists-list .artist-card:nth-child(1){animation-delay:160ms}
+.artists-list .artist-card:nth-child(2){animation-delay:280ms}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-sticker,.hero-sticker-right,.hero-connector-right,.artist-sticker,.media-sticker,.skills-sticker,.hobby-card,.media-item,.artist-photo-wrap::before,.skill,.hero h1,.hero p{animation:none!important;transition:none!important}
+}
+
 /* ensure Skills sticker is positioned relative to the Skills container */
 #skills .container{position:relative}
 
 @media (max-width:720px){
   .hero-sticker{left:-18px;top:-12px;width:64px;height:64px}
   .hero-sticker .pixel-star{width:64px;height:64px}
+  /* keep the beam attached to the smaller star */
+  .hero-sticker::before{left:38px;top:-34px;width:300px;height:120px}
   .media-sticker{top:-18px;right:-12px}
-  .media-heading-wrap .media-sticker{transform:translateY(-40px) rotate(-6deg)}
-  .hero-connector-right{right:6%;bottom:-8px;width:120px;height:120px;transform:translateY(80px)}
-  .hero-connector-right .pixel-connector{width:120px;height:120px}
+  .hero-connector-right{right:6%;bottom:-120px;width:210px;height:210px}
+  .hero-connector-right .pixel-connector{width:210px;height:210px}
   .media-heading-wrap .pixel-books{width:160px;height:160px}
   .skills-sticker{right:6px;top:6px;width:120px;height:120px}
   .skills-sticker .pixel-sun{width:120px;height:120px}
