@@ -29,10 +29,73 @@
     <section class="panel">
       <div class="container">
         <h1>Professional journey</h1>
-        <p class="panel-sub">A brief overview of my work and experiences.</p>
-        <p>I have experience in technical and organizational roles, both in academic and professional settings. This page can be expanded with a timeline, roles, and links to projects or a downloadable CV.</p>
+        <p class="panel-sub">A brief overview of my work and experiences, both in academic and professional settings.</p>
       </div>
     </section>
+    
+      <section id="timeline" class="panel timeline-panel">
+        <div class="container">
+          <h2>Timeline</h2>
+          <p class="panel-sub">Interactive timeline — click any item to expand details.</p>
+
+          <div class="timeline-controls" aria-hidden="false">
+            <label for="timeline-filter" class="sr-only">Filter by year</label>
+            <select id="timeline-filter" aria-label="Filter timeline by year">
+              <option value="all">All years</option>
+              <option value="2024">2024</option>
+              <option value="2022">2022</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+
+          <ol class="timeline" role="list">
+            <li class="timeline-item" data-year="2024">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <h3>Software Engineer</h3>
+                  <div class="timeline-meta">Acme Corp — 2023–2024</div>
+                </div>
+                <p class="timeline-excerpt">Built user-facing features and improved reliability of the platform.</p>
+                <button class="timeline-toggle" aria-expanded="false">Read more</button>
+                <div class="timeline-details" hidden>
+                  <p>Worked on feature X, improved load times by 30%, and led cross-team integrations. Technologies: JavaScript, React, Node.js.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline-item" data-year="2022">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <h3>Product Manager Intern</h3>
+                  <div class="timeline-meta">Innovate Labs — 2021–2022</div>
+                </div>
+                <p class="timeline-excerpt">Coordinated product launches and user research.</p>
+                <button class="timeline-toggle" aria-expanded="false">Read more</button>
+                <div class="timeline-details" hidden>
+                  <p>Designed experiments, synthesized user interviews, and shipped an A/B test that increased activation rates.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline-item" data-year="2020">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <h3>Research Assistant</h3>
+                  <div class="timeline-meta">University — 2019–2020</div>
+                </div>
+                <p class="timeline-excerpt">Conducted experiments in applied AI and data analysis.</p>
+                <button class="timeline-toggle" aria-expanded="false">Read more</button>
+                <div class="timeline-details" hidden>
+                  <p>Published a short paper, built data pipelines for experiments, and mentored undergrads on research methods.</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
   </main>
 
   <footer class="site-footer">

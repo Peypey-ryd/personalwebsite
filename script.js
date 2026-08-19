@@ -63,6 +63,30 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   sections.forEach(s=>{ if(s) obs.observe(s); });
 
+  // Timeline interactions: expand/collapse and filter
+  const timelineToggles = Array.from(document.querySelectorAll('.timeline-toggle'));
+  timelineToggles.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const details = btn.nextElementSibling;
+      if(!details) return;
+      if(expanded){ details.hidden = true; btn.setAttribute('aria-expanded','false'); btn.textContent = 'Read more'; }
+      else { details.hidden = false; btn.setAttribute('aria-expanded','true'); btn.textContent = 'Show less'; }
+    });
+  });
+
+  const timelineFilter = document.getElementById('timeline-filter');
+  if(timelineFilter){
+    timelineFilter.addEventListener('change',(e)=>{
+      const v = e.target.value;
+      const items = Array.from(document.querySelectorAll('.timeline-item'));
+      items.forEach(it=>{
+        if(v === 'all' || it.dataset.year === v) it.style.display = '';
+        else it.style.display = 'none';
+      });
+    });
+  }
+
   // initial active on load
   function setActiveOnLoad(){
     // prefer matching current filename (separate pages)
