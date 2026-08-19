@@ -28,8 +28,18 @@
   <main>
     <section class="hero">
       <div class="container">
+          <div class="hero-sticker" aria-hidden>
+            <svg viewBox="0 0 16 16" width="220" height="220" class="pixel-star" role="img" xmlns="http://www.w3.org/2000/svg"><g shape-rendering="crispEdges"><rect x="7" y="1" width="2" height="2" fill="#ff7fbf"/><rect x="6" y="3" width="4" height="2" fill="#ff7fbf"/><rect x="5" y="5" width="6" height="2" fill="#ffb6da"/><rect x="6" y="7" width="4" height="1" fill="#ffffff"/></g></svg>
+          </div>
+          <div class="hero-sticker-right" aria-hidden>
+            <svg viewBox="0 0 16 16" width="120" height="120" class="pixel-heart" role="img" xmlns="http://www.w3.org/2000/svg"><g shape-rendering="crispEdges"><rect x="4" y="2" width="2" height="2" fill="#ff7fbf"/><rect x="10" y="2" width="2" height="2" fill="#ff7fbf"/><rect x="3" y="4" width="10" height="4" fill="#ffb6da"/><rect x="5" y="8" width="6" height="3" fill="#ff7fbf"/></g></svg>
+          </div>
         <h1>Hi there! My name is Peyton. I'm so glad you found me!</h1>
         <p>I like to build things, help people, and explore new ideas. I made this website to show people what makes me, me. My professional experience matters, but I'm a real person, too, and I want recruiters and friends alike to know that.</p>
+        <!-- right connector sticker to visually bridge hero and hobbies -->
+        <div class="hero-connector-right" aria-hidden>
+          <svg viewBox="0 0 16 16" width="160" height="160" class="pixel-connector" role="img" xmlns="http://www.w3.org/2000/svg"><g shape-rendering="crispEdges"><rect x="7" y="0" width="2" height="4" fill="#ff7fbf"/><rect x="6" y="4" width="4" height="2" fill="#ffd1e6"/><rect x="5" y="6" width="6" height="2" fill="#73d8c8"/><rect x="6" y="8" width="4" height="4" fill="#ffb6da"/></g></svg>
+        </div>
       </div>
     </section>
 
@@ -58,7 +68,20 @@
             <img src="Images/Hobbies/hallstatt.jpg" alt="Travel scene">
             <div class="card-body">
               <h3>Travelling</h3>
-              <p>I love to take in the culture and history of new places. I've made it a habit to test out the ice cream of each destination! I enjoy recharging and taking in beautiful scenery. A fresh perspective and location fuels my creativity!</p>
+              <p>While beautiful Washington, D.C. is my home base, I love to take in the culture and history of new places. I've made it a habit to test out the ice cream of each destination! I enjoy taking in beautiful scenery and going to the most gorgeous locations. A fresh perspective and location fuels my creativity!</p>
+              <p>Of all my travels, here are the top 10 places I've been to:</p>
+              <ul>
+                <li>Santorini, Greece</li>
+                <li>Hallstatt, Austria</li>
+                <li>Cape Cod, Massachusetts</li>
+                <li>Nantucket, Massachusetts</li>
+                <li>Laguna Beach, California</li>
+                <li>Munich, Germany</li>
+                <li>Toronto, Canada</li>
+                <li>Miami, Florida</li>
+                <li>San José, Costa Rica</li>
+                <li>Punta Cana, Dominican Republic</li>
+              </ul>
             </div>
           </article>
 
@@ -102,9 +125,30 @@
 
     <section id="media" class="panel">
       <div class="container">
-        <h2>Media list</h2>
+        <div class="media-heading-wrap">
+          <h2>Media list</h2>
+          <div class="media-sticker" aria-hidden>
+            <!-- pixel open book, larger -->
+            <svg viewBox="0 0 32 24" width="320" height="320" class="pixel-books" role="img" xmlns="http://www.w3.org/2000/svg"><g shape-rendering="crispEdges">
+              <rect x="1" y="18" width="30" height="2" fill="#6c3f56"/>
+              <!-- left page -->
+              <rect x="2" y="6" width="12" height="10" fill="#ffd1e6"/>
+              <rect x="4" y="8" width="8" height="1" fill="#ff7fbf"/>
+              <rect x="4" y="10" width="8" height="1" fill="#ffb6da"/>
+              <rect x="4" y="12" width="8" height="1" fill="#ffe6f0"/>
+              <!-- right page -->
+              <rect x="18" y="6" width="12" height="10" fill="#e6fff9"/>
+              <rect x="20" y="8" width="8" height="1" fill="#73d8c8"/>
+              <rect x="20" y="10" width="8" height="1" fill="#c8fff6"/>
+              <rect x="20" y="12" width="8" height="1" fill="#e6fffb"/>
+              <!-- center binding accent -->
+              <rect x="15" y="6" width="2" height="10" fill="#6c3f56"/>
+            </g></svg>
+          </div>
+        </div>
         <p class="panel-sub">Most recent pieces I've consumed.</p>
-        <ol class="media-list">
+        <div class="media-panel">
+          <ol class="media-list">
           <li>
             <div class="media-item">
               <div>
@@ -155,75 +199,107 @@
               </div>
             </div>
           </li>
-        </ol>
+          </ol>
+        </div>
           <!-- Favorite artists -->
           <div class="favorite-artists">
+            <div class="artist-sticker" aria-hidden>
+              <!-- Custom transparent pixel headphones (no white background) -->
+              <svg viewBox="0 0 40 40" width="260" height="260" class="pixel-headphones" role="img" xmlns="http://www.w3.org/2000/svg">
+                <g shape-rendering="crispEdges">
+                  <!-- band -->
+                  <rect x="10" y="3" width="20" height="4" fill="#6c3f56" />
+                  <rect x="8" y="5" width="2" height="3" fill="#6c3f56" />
+                  <rect x="30" y="5" width="2" height="3" fill="#6c3f56" />
+
+                  <!-- left earcup outer chunk -->
+                  <rect x="3" y="9" width="8" height="12" fill="#6c3f56" />
+                  <rect x="5" y="11" width="4" height="8" fill="#6c3f56" />
+                  <rect x="6" y="12" width="2" height="6" fill="#ff7fbf" />
+                  <rect x="4" y="14" width="2" height="4" fill="#ffe6f0" />
+
+                  <!-- right earcup outer chunk -->
+                  <rect x="29" y="9" width="8" height="12" fill="#6c3f56" />
+                  <rect x="31" y="11" width="4" height="8" fill="#6c3f56" />
+                  <rect x="32" y="12" width="2" height="6" fill="#ff7fbf" />
+                  <rect x="33" y="14" width="2" height="4" fill="#ffe6f0" />
+
+                  <!-- small connector pixels -->
+                  <rect x="10" y="7" width="2" height="2" fill="#6c3f56" />
+                  <rect x="28" y="7" width="2" height="2" fill="#6c3f56" />
+
+                  <!-- accent pixels -->
+                  <rect x="13" y="4" width="2" height="1" fill="#6c3f56" />
+                  <rect x="25" y="4" width="2" height="1" fill="#6c3f56" />
+                </g>
+              </svg>
+            </div>
             <h3 class="artists-title">My favorite artists</h3>
             <p class="panel-sub">I love music!! Here are my top picks, from classic rock to classical.</p>
 
             <ul class="artists-list">
               <li class="artist-card">
-                <img src="Images/Fav Artists/green-day-pic.jpg" alt="Green Day" class="artist-photo">
+                <div class="artist-photo-wrap"><img src="Images/Fav Artists/green-day-pic.jpg" alt="Green Day" class="artist-photo"></div>
                 <div class="artist-body">
                   <div class="artist-name">Green Day</div>
                   <div class="artist-genre">Punk Rock</div>
                   <label class="artist-best-label">Best songs:
-                    <input type="text" class="artist-best" value="Wake Me Up When September Ends, Last Night on Earth, Brain Stew" />
+                    <div class="artist-best static">Wake Me Up When September Ends, Last Night on Earth, Brain Stew</div>
                   </label>
                 </div>
               </li>
 
               <li class="artist-card">
-                <img src="Images/Fav Artists/tchaikovsky.jpg" alt="Pyotr Ilyich Tchaikovsky" class="artist-photo">
+                <div class="artist-photo-wrap"><img src="Images/Fav Artists/tchaikovsky.jpg" alt="Pyotr Ilyich Tchaikovsky" class="artist-photo"></div>
                 <div class="artist-body">
                   <div class="artist-name">Pyotr Ilyich Tchaikovsky</div>
                   <div class="artist-genre">Classical</div>
                   <label class="artist-best-label">Best songs:
-                    <input type="text" class="artist-best" value="Pas De Deux & Swan Lake" />
+                    <div class="artist-best static">Pas De Deux & Swan Lake</div>
                   </label>
                 </div>
               </li>
 
               <li class="artist-card">
-                <img src="Images/Fav Artists/the-strokes-pic.jpg" alt="The Strokes" class="artist-photo">
+                <div class="artist-photo-wrap"><img src="Images/Fav Artists/the-strokes-pic.jpg" alt="The Strokes" class="artist-photo"></div>
                 <div class="artist-body">
                   <div class="artist-name">The Strokes</div>
                   <div class="artist-genre">Indie Rock</div>
                   <label class="artist-best-label">Best songs:
-                    <input type="text" class="artist-best" value="The Adults Are Talking, Selfless, Reptilia" />
+                    <div class="artist-best static">The Adults Are Talking, Selfless, Reptilia</div>
                   </label>
                 </div>
               </li>
 
               <li class="artist-card">
-                <img src="Images/Fav Artists/chopin.jpg" alt="Frederic Chopin" class="artist-photo">
+                <div class="artist-photo-wrap"><img src="Images/Fav Artists/chopin.jpg" alt="Frederic Chopin" class="artist-photo"></div>
                 <div class="artist-body">
                   <div class="artist-name">Frederic Chopin</div>
                   <div class="artist-genre">Classical</div>
                   <label class="artist-best-label">Best songs:
-                    <input type="text" class="artist-best" value="Nocturne No. 2, Ballade No. 1, & Waltz No. 19" />
+                    <div class="artist-best static">Nocturne No. 2, Ballade No. 1, &amp; Waltz No. 19</div>
                   </label>
                 </div>
               </li>
 
               <li class="artist-card">
-                <img src="Images/Fav Artists/radiohead-in-rainbows.jpg" alt="Radiohead" class="artist-photo">
+                <div class="artist-photo-wrap"><img src="Images/Fav Artists/radiohead-in-rainbows.jpg" alt="Radiohead" class="artist-photo"></div>
                 <div class="artist-body">
                   <div class="artist-name">Radiohead</div>
                   <div class="artist-genre">Alternative Rock</div>
                   <label class="artist-best-label">Best songs:
-                    <input type="text" class="artist-best" value="All I Need, Motion Picture Soundtrack, Black Star, Fake Plastic Trees" />
+                    <div class="artist-best static">All I Need, Motion Picture Soundtrack, Black Star, Fake Plastic Trees</div>
                   </label>
                 </div>
               </li>
 
               <li class="artist-card">
-                <img src="Images/Fav Artists/weezer.jpg" alt="Weezer" class="artist-photo">
+                <div class="artist-photo-wrap"><img src="Images/Fav Artists/weezer.jpg" alt="Weezer" class="artist-photo"></div>
                 <div class="artist-body">
                   <div class="artist-name">Weezer</div>
                   <div class="artist-genre">Alternative Rock</div>
                   <label class="artist-best-label">Best songs:
-                    <input type="text" class="artist-best" value="Buddy Holly, Go Away, & I Just Threw Out The Love Of My Life" />
+                    <div class="artist-best static">Buddy Holly, Go Away, & I Just Threw Out The Love Of My Life</div>
                   </label>
                 </div>
               </li>
@@ -235,6 +311,27 @@
     <section id="skills" class="panel">
       <div class="container">
         <h2>Skills</h2>
+        <div class="skills-sticker" aria-hidden>
+          <svg viewBox="0 0 36 36" width="220" height="220" class="pixel-sun" role="img" xmlns="http://www.w3.org/2000/svg">
+            <g shape-rendering="crispEdges">
+              <!-- center sun -->
+              <rect x="14" y="14" width="8" height="8" fill="#ffd166"/>
+              <rect x="13" y="14" width="1" height="1" fill="#ffd166"/>
+              <!-- rays -->
+              <rect x="9" y="15" width="3" height="2" fill="#ff9f1c"/>
+              <rect x="24" y="15" width="3" height="2" fill="#ff9f1c"/>
+              <rect x="16" y="9" width="2" height="3" fill="#ff9f1c"/>
+              <rect x="16" y="24" width="2" height="3" fill="#ff9f1c"/>
+              <rect x="11" y="11" width="2" height="2" fill="#ffb703"/>
+              <rect x="23" y="11" width="2" height="2" fill="#ffb703"/>
+              <rect x="11" y="23" width="2" height="2" fill="#ffb703"/>
+              <rect x="23" y="23" width="2" height="2" fill="#ffb703"/>
+              <!-- decorative sparkles -->
+              <rect x="5" y="6" width="2" height="2" fill="#ffd166"/>
+              <rect x="30" y="6" width="2" height="2" fill="#ffd166"/>
+            </g>
+          </svg>
+        </div>
         <p class="panel-sub">A few of my core competencies and strengths.</p>
         <div class="skills-grid">
           <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> HTML</span>
@@ -242,9 +339,9 @@
           <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> Python</span>
           <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> Excel</span>
           <span class="skill"><svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M4 6h16v2H4zM3 10h18v8H3z"/></svg> Artificial Intelligence</span>
-          <span class="skill"><svg class="icon briefcase" viewBox="0 0 24 24" aria-hidden><path d="M6 7V6a2 2 0 012-2h8a2 2 0 012 2v1h3v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3z"/></svg> Conversational Spanish</span>
-          <span class="skill"><svg class="icon briefcase" viewBox="0 0 24 24" aria-hidden><path d="M6 7V6a2 2 0 012-2h8a2 2 0 012 2v1h3v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3z"/></svg> Event Planning & Execution</span>
-          <span class="skill"><svg class="icon briefcase" viewBox="0 0 24 24" aria-hidden><path d="M6 7V6a2 2 0 012-2h8a2 2 0 012 2v1h3v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3z"/></svg> Customer Service</span>
+          <span class="skill"><svg class="icon chat" viewBox="0 0 24 24" width="20" height="20" fill="#9dbf9b" aria-hidden><path d="M20 2H4c-1.1 0-2 .9-2 2v14l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> Conversational Spanish</span>
+          <span class="skill"><svg class="icon chat" viewBox="0 0 24 24" width="20" height="20" fill="#9dbf9b" aria-hidden><path d="M20 2H4c-1.1 0-2 .9-2 2v14l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> Event Planning & Execution</span>
+          <span class="skill"><svg class="icon chat" viewBox="0 0 24 24" width="20" height="20" fill="#9dbf9b" aria-hidden><path d="M20 2H4c-1.1 0-2 .9-2 2v14l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> Customer Service</span>
         </div>
       </div>
     </section>
