@@ -81,7 +81,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
       const v = e.target.value;
       const items = Array.from(document.querySelectorAll('.timeline-item'));
       items.forEach(it=>{
-        if(v === 'all' || it.dataset.year === v) it.style.display = '';
+        // data-year may list several space-separated years for roles that span more than one
+        const years = (it.dataset.year || '').split(/\s+/);
+        if(v === 'all' || years.includes(v)) it.style.display = '';
         else it.style.display = 'none';
       });
     });

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Peyton Rydzewski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html">Peyton Rydzewski</a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span class="nav-icon">☰</span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+      <nav class="nav" id="site-nav">
+        <a href="./index.html">Home</a>
+        <a href="./professional-journey.html">Professional journey</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="panel-sub">Things I've built — hackathon wins, engines, security tools, and works in progress. Most of it lives on <a href="https://github.com/Peypey-ryd" target="_blank" rel="noopener noreferrer">my GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section id="award-winners" class="panel">
+      <div class="container">
+        <h2>Award winners</h2>
+        <p class="panel-sub">Two first-place hackathon projects.</p>
+        <div class="hobbies-grid">
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>Equity-First Managed Retreat Simulator</h3>
+              <div class="media-meta">🥇 1st place — WMGIC × PIT-UN 2026, William &amp; Mary · Python, Flask, JavaScript</div>
+              <p>A participatory budgeting tool for coastal climate adaptation in Miami-Dade. Managed retreat decisions are usually made top-down, which tends to favor wealthy real estate over vulnerable neighborhoods — this puts the choices in the community's hands instead. Users allocate a budget across infrastructure, soft interventions, and relocation programs, then see the projected equity outcomes for each neighborhood. Built on a Flask API for outcome modeling, with Leaflet and OpenStreetMap rendering GeoJSON census tracts layered with flood-risk and demographic data, and Chart.js for the equity charts. Deployed on Render.</p>
+              <div class="hobby-actions">
+                <a class="btn-inline btn-substack" href="https://github.com/dandreae/WMGIC-2026" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>JackHackDay — data-driven policy suggestions</h3>
+              <div class="media-meta">🥇 1st place, data-driven policy track — GUWeCode Gemini API × MLH hackathon · Python, JavaScript</div>
+              <p>A tool that turns a dataset into evidence-based policy recommendations instead of relying on intuition. It pairs Google's Gemini API with analysis of a California dataset to generate and rank policy suggestions, wrapped in a browser interface. Python handles the data processing and Gemini calls; HTML, CSS, and JavaScript make up the front end. Built for GUWeCode and Hoya Hacks.</p>
+              <div class="hobby-actions">
+                <a class="btn-inline btn-substack" href="https://github.com/Peypey-ryd/JackHackDay" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="in-progress" class="panel">
+      <div class="container">
+        <h2>In progress</h2>
+        <p class="panel-sub">Currently being built.</p>
+        <div class="hobbies-grid">
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>Integrate</h3>
+              <div class="media-meta">🚧 Work in progress</div>
+              <!-- TODO: replace this line with a real description of what Integrate does,
+                   the stack, and a repo link once there's something to link to. -->
+              <p>A project I'm actively building. More details — and a repo link — coming soon.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="more-projects" class="panel">
+      <div class="container">
+        <h2>More from my GitHub</h2>
+        <p class="panel-sub">Engines, security tooling, and this site.</p>
+        <div class="hobbies-grid">
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>Basic Trading Engine</h3>
+              <div class="media-meta">Python</div>
+              <p>A functional trading system split across two pieces: a client that sends orders and a server that receives and processes them. A hands-on way to learn how order flow and matching actually work under the hood.</p>
+              <div class="hobby-actions">
+                <a class="btn-inline btn-substack" href="https://github.com/Peypey-ryd/Basic-Trading-Engine" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>Black-Scholes Options Pricing Engine</h3>
+              <div class="media-meta">C++</div>
+              <p>An implementation of the Black-Scholes model for pricing European call and put options. Written in C++ to get comfortable with both the math of derivatives pricing and performance-minded numerical code.</p>
+              <div class="hobby-actions">
+                <a class="btn-inline btn-substack" href="https://github.com/Peypey-ryd/Black-Scholes-Options-Pricing-Engine" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>Malware Analyzer</h3>
+              <div class="media-meta">PowerShell</div>
+              <p>A monitoring script that watches a system for changes to the file system and to network connections, then writes what it finds to JSON for review. Grew out of my cybersecurity internship work on incident response.</p>
+              <div class="hobby-actions">
+                <a class="btn-inline btn-substack" href="https://github.com/Peypey-ryd/MalwareAnalyzer" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>Automated Vulnerability Scanner</h3>
+              <div class="media-meta">Python</div>
+              <p>A scanner that runs a port scan to identify open services on a host, then inspects HTTP headers for common security misconfigurations. Built to automate the tedious first pass of a security review.</p>
+              <div class="hobby-actions">
+                <a class="btn-inline btn-substack" href="https://github.com/Peypey-ryd/AutomatedVulnerabilityScanner" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>This website</h3>
+              <div class="media-meta">HTML, CSS, JavaScript</div>
+              <p>A hand-coded personal site built from scratch — no frameworks, no site builder. It has a pixel-art sticker aesthetic, a filterable interactive timeline, custom SVG cursors, and a working contact form. I wanted a corner of the internet that felt like me rather than a template.</p>
+              <div class="hobby-actions">
+                <a class="btn-inline btn-substack" href="https://github.com/Peypey-ryd/personalwebsite" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Template for additional projects — copy this block and fill it in.
+          <article class="hobby-card">
+            <div class="card-body">
+              <h3>Project name</h3>
+              <div class="media-meta">Language or stack</div>
+              <p>What it is, why you built it, and what you used to build it.</p>
+              <div class="hobby-actions">
+                <a class="btn-inline btn-substack" href="#" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              </div>
+            </div>
+          </article>
+          -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> — Personal site</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
